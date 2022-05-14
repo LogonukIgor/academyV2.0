@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution {
-
+	
 	static class DoublyLinkedListNode {
 		public int data;
 		public DoublyLinkedListNode next;
@@ -54,10 +54,7 @@ public class Solution {
 	}
 
 	public static DoublyLinkedListNode reverse(DoublyLinkedList list) {
-		DoublyLinkedList nodeTemp = new DoublyLinkedList();
-		while(list.head.next!=null) {
-			nodeTemp.insertNode(list.tail.prev.data);
-		}
+		DoublyLinkedListNode nodeTemp = new DoublyLinkedListNode(list.tail.data);
 		return nodeTemp;
 	}
 
