@@ -33,7 +33,6 @@ public class Task4 {
 				BufferedWriter bufferedWriter = new BufferedWriter(writer);) {
 			for (int i = 1; i <= 100; i++) {
 				String path = "src\\main\\java\\by\\academy\\homework\\hw6\\task4\\" + i + ".txt";
-				int x = textLength(path);
 				bufferedWriter.write(i + ".txt  "+textLength(path));
 				bufferedWriter.newLine();
 			}
@@ -45,12 +44,14 @@ public class Task4 {
 	public static int task2Length() throws IOException {
 		InputStream input = new FileInputStream("task2_hw6");
 		int size = input.available();
+		input.close();
 		return size;
 	}
 
 	public static int textLength(String path) throws IOException {
 		InputStream input = new FileInputStream(path);
 		int size = input.available();
+		input.close();
 		return size;
 	}
 }
